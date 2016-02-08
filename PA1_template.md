@@ -182,6 +182,8 @@ data2[data2$type_of_day == 1,]
 ```
 
 ```r
+td <- names(data2[, type_of_day])
+
 tot_vals1 <- exec_part3(setDF(data2[data2$type_of_day == 0,]))
 mean_steps_by_int0 <- tot_vals1$mean_steps_by_int
 tot_vals1$gettmax()
@@ -204,7 +206,7 @@ tot_vals2$gettmax()
 ```r
 ## Get the plots into one single figure
 par(mfrow=c(1,1))
-plot(int, mean_steps_by_int0, type = "l", xlab="", ylab="Number of Steps", main = "weekday")
+plot(int, mean_steps_by_int0, type = "l", xlab="Interval", ylab="Number of Steps", main = "weekday")
 ```
 
 ![](PA1_template_files/figure-html/Part6-1.png) 
