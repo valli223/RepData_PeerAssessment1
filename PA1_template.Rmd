@@ -42,12 +42,15 @@ exec_part2 <- function(x) {
   gettmn <- function() { tot_mean }
   gettmdn <- function() { tot_med }
   
-  list(gettmdn = gettmdn, gettmn = gettmn, total_steps_by_date = total_steps_by_date, mean_steps_by_day = mean_steps_by_day)
+  list(gettmdn = gettmdn, gettmn = gettmn, total_steps_by_date = total_steps_by_date, mean_steps_by_day = mean_steps_by_day, median_steps_by_day = median_steps_by_day)
 }
 
 tot_vals <- exec_part2(dt1)
 tot_mean1 <- tot_vals$gettmn()
 tot_steps1 <- tot_vals$total_steps_by_date
+
+tot_vals$median_steps_by_day
+tot_vals$mean_steps_by_day
 ```  
 
 The Mean of the Total number of steps taken each day is : **`r tot_vals$gettmn()`**  
